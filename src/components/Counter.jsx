@@ -3,16 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement, reset } from '../features/counterSlice';
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.value);
+  const count = useSelector(state => state.counter.value);
   const dispatch = useDispatch();
 
   return (
-    <div className="text-center">
-      <h2 className="text-2xl mb-4">Лічильник: {count}</h2>
-      <div className="flex justify-center gap-4">
-        <button onClick={() => dispatch(increment())} className="bg-green-500 text-white px-4 py-2 rounded">+</button>
-        <button onClick={() => dispatch(decrement())} className="bg-red-500 text-white px-4 py-2 rounded">-</button>
-        <button onClick={() => dispatch(reset())} className="bg-gray-500 text-white px-4 py-2 rounded">Reset</button>
+    <div style={{ textAlign: 'center' }}>
+      <h2 style={{ marginBottom: '1rem' }}>Лічильник: {count}</h2>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <button onClick={() => dispatch(increment())} style={{ backgroundColor: 'green', color: 'white', padding: '0.5rem 1rem', borderRadius: '5px' }}>+</button>
+        <button onClick={() => dispatch(decrement())} style={{ backgroundColor: 'red', color: 'white', padding: '0.5rem 1rem', borderRadius: '5px' }}>-</button>
+        <button onClick={() => dispatch(reset())} style={{ backgroundColor: 'gray', color: 'white', padding: '0.5rem 1rem', borderRadius: '5px' }}>Reset</button>
       </div>
     </div>
   );

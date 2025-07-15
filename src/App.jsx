@@ -3,11 +3,17 @@ import Counter from './components/Counter';
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">
-      <h1 className="text-4xl font-bold mb-6">Redux Counter</h1>
-      <button style={{ margin: '5px' }}>+</button>
-
-
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      backgroundColor: '#f3f4f6',
+      color: '#1f2937',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Redux Counter</h1>
       <Counter />
     </div>
   );
